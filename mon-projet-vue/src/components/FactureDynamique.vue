@@ -13,12 +13,17 @@ const totalPanier = computed (() => {
     }, 0)
 })
 
+function PrixArticle(article)  {
+   return  article.quantite * article.prix;
+}
+
 
 const totalArticles = computed (() => {
     return panier.value.reduce((total, article) => {
     return total + article.quantite
     }, 0)
 })
+
 </script>
 
 <template>
@@ -26,8 +31,9 @@ const totalArticles = computed (() => {
         <div v-for="p in panier" :key="p.id">
             <p>{{ p.nom }}</p>
             <p>{{ p.prix }} Ariary</p>
-            <p>{{ p.quantite }}</p>
-            <p>Total de cette panier:{{p.quantite * p.prix}} Ariary</p>
+            <p :style="{ color : p.quantite === 0 ? 'red' : 'green'}">{{ p.quantite }}</p>
+            <p ></p>
+            <p>Total de cette panier:{{PrixArticle(p)}} Ariary</p>
             <button @click="p.quantite++">+</button>
             <button @click="p.quantite > 0 && p.quantite --">-</button>
         </div>

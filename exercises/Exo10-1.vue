@@ -1,9 +1,9 @@
 <script setup>
 import {ref} from 'vue'
-import Facture from './components/Facture.vue';
+import FactureDynamique from './components/FactureDynamique.vue';
 
 </script>
 
 <template>
-    <Facture />
+    <FactureDynamique />
 </template>
