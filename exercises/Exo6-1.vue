@@ -8,9 +8,7 @@ function incrementer() {
 }
 
 function reinitialiser() {
-  if (compteur.value > 0) {
-    compteur.value--;
-  }
+    compteur.value = 0;
 }
 
 </script>

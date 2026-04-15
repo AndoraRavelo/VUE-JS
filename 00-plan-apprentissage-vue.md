@@ -14,11 +14,11 @@ On va avancer **petit à petit**, et à chaque étape tu auras un cours + un exe
 | 03  | `03-interpolation-et-data.md`     | Afficher des données (`ref`, `{{ }}`)        | ✅ Terminé  |
 | 04  | `04-directives-v-if-v-show.md`    | Conditions (`v-if`, `v-else`, `v-show`)      | ✅ Terminé  |
 | 05  | `05-directive-v-for.md`           | Listes (`v-for`)                             | ✅ Terminé  |
-| 06  | `06-evenements-v-on.md`           | Événements & boutons (`v-on`, `@click`)      | 🔜 Prochain |
-| 07  | `07-v-model-formulaires.md`       | Formulaires & liaison de données (`v-model`) | ⬜ À venir  |
-| 08  | `08-composants.md`                | Les Composants (créer & réutiliser)          | ⬜ À venir  |
-| 09  | `09-props.md`                     | Passer des données entre composants (props)  | ⬜ À venir  |
-| 10  | `10-computed-et-watch.md`         | Propriétés calculées & watchers              | ⬜ À venir  |
+| 06  | `06-evenements-v-on.md`           | Événements & boutons (`v-on`, `@click`)      | ✅ Terminé  |
+| 07  | `07-v-model-formulaires.md`       | Formulaires & liaison de données (`v-model`) | ✅ Terminé  |
+| 08  | `08-composants.md`                | Les Composants (créer & réutiliser)          | ✅ Terminé  |
+| 09  | `09-props.md`                     | Passer des données entre composants (props)  | ✅ Terminé  |
+| 10  | `10-computed-et-watch.md`         | Propriétés calculées & watchers              | 🔜 Prochain |
 
 ---
 

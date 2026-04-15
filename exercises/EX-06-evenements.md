@@ -47,17 +47,17 @@ button {
 ### Ce que tu dois faire :
 
 1. Crée une variable `compteur` avec la valeur `0`
-
 2. Crée **deux fonctions** :
+
    - `incrementer()` → ajoute 1 au compteur
    - `reinitialiser()` → remet le compteur à 0
-
 3. Dans le template, affiche :
+
    - Le compteur dans un `<h2>` : `Compteur : 0`
    - Un bouton **"➕ Ajouter"** qui appelle `incrementer`
    - Un bouton **"🔄 Réinitialiser"** qui appelle `reinitialiser`
-
 4. **Bonus ⭐⭐** : Affiche un message différent selon la valeur du compteur :
+
    - Compteur = 0 → `"Commence à cliquer !"`
    - Compteur entre 1 et 9 → `"Continue..."`
    - Compteur ≥ 10 → `"🏆 Tu as atteint 10 !"`
@@ -77,23 +77,25 @@ button {
 ### Ce que tu dois faire :
 
 1. Crée ces variables :
+
    - `score` → `0`
    - `historique` → un tableau vide `[]`
-
 2. Crée une fonction `modifier(valeur)` qui :
+
    - Ajoute `valeur` au score
    - Empêche le score de descendre en dessous de 0 (si le score serait négatif, il reste à 0)
    - Ajoute une entrée dans `historique` pour tracer l'action
 
    > 💡 Pour l'historique : `historique.value.push('+ 10 points')` ajoute une ligne au tableau
-
+   >
 3. Dans le template, affiche :
+
    - Le score actuel dans un `<h2>`
    - **4 boutons** avec ces valeurs : `+10`, `+5`, `-5`, `-10`
      → Ils appellent tous `modifier(...)` avec la bonne valeur en argument
    - La liste de l'historique des actions avec `v-for` (les 5 dernières seulement si tu veux faire le bonus)
 
-### 💡 Indices :
+### 💡 Indices :c
 
 - Avec argument dans le template : `@click="modifier(10)"`
 - Pour empêcher le score d'être négatif :
@@ -115,21 +117,21 @@ button {
 ### Ce que tu dois faire :
 
 1. Crée ces variables :
+
    - `taches` → un tableau avec **3 tâches de départ** (juste des textes)
    - `nouvelleTache` → une chaîne vide `''`
-
 2. Crée ces fonctions :
+
    - `ajouterTache()` → ajoute `nouvelleTache` dans le tableau `taches`, puis vide `nouvelleTache`
      - ⚠️ Ne pas ajouter si le texte est vide ! Utilise `.trim()` pour vérifier
    - `supprimerTache(index)` → supprime la tâche à la position `index`
-
 3. Dans le template, construis :
+
    - Un `<h2>` qui affiche : `📝 Mes tâches (X)` — le X est le nombre de tâches
    - Un `<input>` lié à `nouvelleTache` avec `v-model="nouvelleTache"`
    - Un bouton **"Ajouter ➕"** qui appelle `ajouterTache`
    - Un bouton **"Entrée"** qui fonctionne aussi avec `@keyup.enter="ajouterTache"` sur l'input
    - La liste des tâches avec un bouton **"❌"** sur chaque ligne pour supprimer
-
 4. **Bonus ⭐⭐⭐⭐** : Si la liste est **vide**, affiche un message : `"Aucune tâche, profite !  😎"` à la place de la liste
 
 ### 💡 Indices :
@@ -145,10 +147,10 @@ button {
 
 ## ✅ Auto-évaluation
 
-- [ ] Mes fonctions sont bien dans `<script setup>` ?
-- [ ] J'utilise `.value` pour modifier mes variables **dans les fonctions** (mais pas dans le template) ?
-- [ ] Sans argument : `@click="maFonction"` — Avec argument : `@click="maFonction(valeur)"` ?
-- [ ] Mon tableau se met bien à jour automatiquement dans le navigateur quand je clique ?
+- [X] Mes fonctions sont bien dans `<script setup>` ?
+- [X] J'utilise `.value` pour modifier mes variables **dans les fonctions** (mais pas dans le template) ?
+- [X] Sans argument : `@click="maFonction"` — Avec argument : `@click="maFonction(valeur)"` ?
+- [X] Mon tableau se met bien à jour automatiquement dans le navigateur quand je clique ?
 
 ---
 
