@@ -78,8 +78,8 @@ Si tu rafraîchis ta page (F5), le texte de ton bloc-note **sera toujours là** 
 
 ## ✅ Auto-évaluation
 
-- [ ] Un `computed` a toujours un `return` ! C'est bon pour toi ?
-- [ ] Dans le template (le HTML), les `computed` s'écrivent comme des variables (sans parenthèses) `{{ totalPanier }}` et non pas `{{ totalPanier() }}`.
+- [X] Un `computed` a toujours un `return` ! C'est bon pour toi ?
+- [X] Dans le template (le HTML), les `computed` s'écrivent comme des variables (sans parenthèses) `{{ totalPanier }}` et non pas `{{ totalPanier() }}`.
 - [ ] Mon `watch` utilise les deux paramètres `(nouvelleValeur, ancienneValeur)` pour écouter le texte.
 
 ---

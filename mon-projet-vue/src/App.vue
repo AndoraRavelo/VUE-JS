@@ -1,26 +1,22 @@
 <script setup>
-import {ref, computed} from 'vue'
+import {ref, computed, watch} from 'vue'
 
-const contacts = ref([
-    {id: 1, prenom:'Ambre'},
-    {id: 2, prenom:'Mikajy'},
-    {id: 3, prenom: 'Ando'}
-])
+const maNote = ref(localStorage.getItem('note_secrete') || '' )
+const notification = ref('')
 
-const recherche = ref('')
-
-const contactsFiltres = computed (() => {
-    return contacts.value.filter(p => p.prenom.toLowerCase().includes(recherche.value))
-    }
-)
+watch(maNote, (nouvelleValeur) => {
+    notification.value = "Sauvegarde en cours...."
+    localStorage.setItem('note_secrete', nouvelleValeur)
+    setTimeout(() => {
+        notification.value = "Toutes les modifications sont sauvegardees"
+        console.log('La note est passe de "${note_secrete}" a "${nouvellevaleur}"')
+    }, 1000)
+})
 </script>
 
 <template>
-    <input v-model="recherche" placeholder="Rechercher ici">
-    <br>
-    <ul>
-        <li v-for="contacts in contactsFiltres" :key="contacts.id">
-                {{ contacts.prenom }}
-        </li>
-    </ul>
+    <div class="conteneur">
+        <textarea v-model="maNote" placeholder="Ecrire ta note ici...."></textarea>
+        <p>{{ notification }}</p>
+    </div>
 </template>
