@@ -18,7 +18,8 @@ On va avancer **petit à petit**, et à chaque étape tu auras un cours + un exe
 | 07  | `07-v-model-formulaires.md`       | Formulaires & liaison de données (`v-model`) | ✅ Terminé  |
 | 08  | `08-composants.md`                | Les Composants (créer & réutiliser)          | ✅ Terminé  |
 | 09  | `09-props.md`                     | Passer des données entre composants (props)  | ✅ Terminé  |
-| 10  | `10-computed-et-watch.md`         | Propriétés calculées & watchers              | 🔜 Prochain |
+| 10  | `10-computed-et-watch.md`         | Propriétés calculées & watchers              | ✅ Terminé  |
+| 11  | `11-travailler-avec-api.md`       | Se connecter à un Backend (API)              | 🔜 Prochain |
 
 ---
 

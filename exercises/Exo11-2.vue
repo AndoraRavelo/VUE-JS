@@ -33,6 +33,6 @@ onMounted (() => {
     <br>
     <br>
     <ul v-for="user in userfiltres " :key="user.id">
-        <li>{{ user.name }}</li>
+        {{ user.name }}
     </ul>
 </template>
