@@ -5,7 +5,8 @@
 ---
 
 ## 🛠️ Étape 0 : Installer Vue Router
-Dans ton projet actuel, le Router n'est pas encore installé. 
+
+Dans ton projet actuel, le Router n'est pas encore installé.
 
 1. **Ouvre un nouveau terminal** (sans couper ton serveur `dev`).
 2. Tape cette commande :
@@ -35,7 +36,7 @@ Dans ton projet actuel, le Router n'est pas encore installé.
 ### Ce que tu dois faire :
 
 1. Crée le fichier `src/router/index.js` (ou `.ts`).
-2. Configure les deux routes : 
+2. Configure les deux routes :
    - `'/'` pour `HomeView`
    - `'/contact'` pour `ContactView`
 3. Dans ton fichier `src/main.ts`, importe ce router et dis à Vue de l'utiliser :
@@ -60,16 +61,17 @@ Dans ton projet actuel, le Router n'est pas encore installé.
 3. Ajoute la balise `<RouterView />` en dessous pour que les pages s'affichent.
 
 ### 🧐 Ce qu'il faut observer :
+
 Regarde l'URL dans ton navigateur. Quand tu cliques sur "Contact", l'URL devient `.../contact` et le formulaire apparaît instantanément sans que la petite icône de chargement du navigateur ne tourne ! C'est ça, la puissance d'une **SPA** (Single Page Application).
 
 ---
 
 ## ✅ Auto-évaluation
 
-- [ ] J'ai bien installé `vue-router` avec npm ?
-- [ ] Mes pages sont bien dans le dossier `views/` ?
-- [ ] J'ai utilisé `<RouterLink>` et non pas `<a>` ?
-- [ ] Ma balise `<RouterView />` est bien présente dans `App.vue` ?
+- [X] J'ai bien installé `vue-router` avec npm ?
+- [X] Mes pages sont bien dans le dossier `views/` ?
+- [X] J'ai utilisé `<RouterLink>` et non pas `<a>` ?
+- [X] Ma balise `<RouterView />` est bien présente dans `App.vue` ?
 
 ---
 
