@@ -20,8 +20,8 @@ On va avancer **petit à petit**, et à chaque étape tu auras un cours + un exe
 | 09  | `09-props.md`                     | Passer des données entre composants (props)  | ✅ Terminé  |
 | 10  | `10-computed-et-watch.md`         | Propriétés calculées & watchers              | ✅ Terminé  |
 | 11  | `11-travailler-avec-api.md`       | Se connecter à un Backend (API)              | ✅ Terminé  |
-| 12  | `12-navigation-vue-router.md`     | Naviguer entre les pages (Vue Router)        | 🔜 Prochain |
-| 13  | `13-gestion-etat-pinia.md`        | Gérer les données globales (Pinia)           | ⬜ À venir  |
+| 12  | `12-navigation-vue-router.md`     | Naviguer entre les pages (Vue Router)        | ✅ Terminé  |
+| 13  | `13-gestion-etat-pinia.md`        | Gérer les données globales (Pinia)           | 🔜 Prochain |
 
 ---
 
