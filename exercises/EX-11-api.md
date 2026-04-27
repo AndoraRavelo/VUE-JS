@@ -5,6 +5,7 @@
 ---
 
 ## 📌 Consignes Générales
+
 Dans cet exercice, on va utiliser l'API gratuite **JSONPlaceholder**. C'est une fausse API utilisée par tous les développeurs pour s'entraîner.
 
 URL à utiliser : `https://jsonplaceholder.typicode.com/posts`
@@ -20,14 +21,15 @@ URL à utiliser : `https://jsonplaceholder.typicode.com/posts`
 1. Crée une variable `articles` (un tableau vide au début).
 2. Crée une variable `enChargement` (un booléen à `true`).
 3. Crée une fonction `chargerArticles()` :
+
    - Elle doit être `async`.
    - Elle doit faire un `fetch` sur l'URL des posts (voir plus haut).
    - Elle doit transformer le résultat en `json()`.
    - Elle doit remplir ta variable `articles` avec les données reçues.
    - À la fin, passe `enChargement` à `false`.
 4. Utilise `onMounted` pour appeler cette fonction dès le démarrage.
-
 5. Dans le template :
+
    - Si `enChargement` est vrai, affiche "Chargement des articles... ⏳".
    - Sinon, affiche la liste des titres d'articles avec un `v-for`.
 
@@ -66,10 +68,10 @@ URL à utiliser : `https://jsonplaceholder.typicode.com/posts`
 
 ## ✅ Auto-évaluation
 
-- [ ] Est-ce que j'ai bien utilisé `await` devant `fetch` ET devant `.json()` ?
-- [ ] Est-ce que mon `onMounted` est bien importé de `'vue'` ?
-- [ ] Est-ce que je gère l'état de chargement (pour que l'utilisateur ne voit pas une page vide) ?
-- [ ] Est-ce que je comprends que les données viennent d'un **vrai serveur** sur internet ?
+- [X] Est-ce que j'ai bien utilisé `await` devant `fetch` ET devant `.json()` ?
+- [X] Est-ce que mon `onMounted` est bien importé de `'vue'` ?
+- [X] Est-ce que je gère l'état de chargement (pour que l'utilisateur ne voit pas une page vide) ?
+- [X] Est-ce que je comprends que les données viennent d'un **vrai serveur** sur internet ?
 
 ---
 
