@@ -43,11 +43,11 @@
 
 ## ✅ Auto-évaluation
 
-- [ ] Mon `input` met-il bien à jour mon state quand je tape au clavier ?
-- [ ] Mes données se chargent-elles bien dès que la page s'ouvre ?
-- [ ] Si je tape "Leanne" dans mon input, est-ce que seule Leanne s'affiche dans la liste ?
+- [X] Mon `input` met-il bien à jour mon state quand je tape au clavier ?
+- [X] Mes données se chargent-elles bien dès que la page s'ouvre ?
+- [X] Si je tape "Leanne" dans mon input, est-ce que seule Leanne s'affiche dans la liste ?
 
 ---
 
-C'est ton dernier grand défi pour les bases de React ! 
+C'est ton dernier grand défi pour les bases de React !
 Une fois que tu auras fini, tu sauras faire les deux frameworks les plus populaires au monde. 🏆🚀

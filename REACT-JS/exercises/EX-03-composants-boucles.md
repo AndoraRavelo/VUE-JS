@@ -13,7 +13,7 @@
 1. Dans `src/`, crée un dossier `components/` (si tu ne l'as pas déjà fait).
 2. Crée un composant `CarteTache.jsx`.
 3. Ce composant doit accepter 2 props : `{ titre, terminee }`.
-4. Rendu JSX attendu : 
+4. Rendu JSX attendu :
    - Affiche le `titre` dans un `<h3>`.
    - Si `terminee` est vrai, affiche le tag `[✅ Fait]`. Sinon, `[⏳ En cours]`.
 
@@ -43,6 +43,7 @@
 ## 💡 Indice syntaxe boucle :
 
 Voici un rappel exact pour éviter les erreurs de syntaxe de boucle :
+
 ```jsx
 // Dans le HTML de App.jsx :
 {tableau.map((element) => (
@@ -54,9 +55,9 @@ Voici un rappel exact pour éviter les erreurs de syntaxe de boucle :
 
 ## ✅ Auto-évaluation
 
-- [ ] L'enfant `CarteTache.jsx` déstructure bien ses props avec des `{}` dans ses paramètres ?
-- [ ] Dans `App.jsx`, la parenthèse du `map` utilise bien `=> (` pour retourner du JSX ?
-- [ ] J'ai bien mis mon attribut `key` **directement sur `<CarteTache>`** et non pas dans le composant interne ?
+- [X] L'enfant `CarteTache.jsx` déstructure bien ses props avec des `{}` dans ses paramètres ?
+- [X] Dans `App.jsx`, la parenthèse du `map` utilise bien `=> (` pour retourner du JSX ?
+- [X] J'ai bien mis mon attribut `key` **directement sur `<CarteTache>`** et non pas dans le composant interne ?
 
 ---
 

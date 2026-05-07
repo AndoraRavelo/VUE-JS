@@ -7,6 +7,7 @@
 ## 1. Les Formulaires (Remplacer `v-model`)
 
 En React, **`v-model` n'existe pas**. On doit faire le travail "à la main" :
+
 1. On lie la `value` à notre variable `state`.
 2. On écoute le changement avec `onChange` pour mettre à jour la variable.
 
@@ -36,6 +37,7 @@ function MonFormulaire() {
 C'est l'un des outils les plus puissants de React. Il remplace à la fois `onMounted` et `watch` de Vue.js.
 
 ### Pourquoi l'utiliser ?
+
 Pour faire des actions qui ne sont pas liées directement à l'affichage : appeler une API, changer le titre de la page, mettre un timer, etc.
 
 ```javascript
@@ -48,6 +50,7 @@ useEffect(() => {
 ```
 
 ### Surveiller un changement (comme `watch`)
+
 ```javascript
 useEffect(() => {
   console.log("Le texte a changé !")
@@ -83,12 +86,12 @@ function ListeUsers() {
 
 ## 📋 Tableau de survie Vue → React
 
-| Vue.js | React |
-| :--- | :--- |
-| `v-model="maRef"` | `value={maRef}` + `onChange={...}` |
-| `onMounted(() => ...)` | `useEffect(() => ..., [])` |
-| `watch(maRef, () => ...)` | `useEffect(() => ..., [maRef])` |
-| `@submit.prevent` | `onSubmit={(e) => { e.preventDefault(); ... }}` |
+| Vue.js                      | React                                             |
+| :-------------------------- | :------------------------------------------------ |
+| `v-model="maRef"`         | `value={maRef}` + `onChange={...}`            |
+| `onMounted(() => ...)`    | `useEffect(() => ..., [])`                      |
+| `watch(maRef, () => ...)` | `useEffect(() => ..., [maRef])`                 |
+| `@submit.prevent`         | `onSubmit={(e) => { e.preventDefault(); ... }}` |
 
 ---
 
