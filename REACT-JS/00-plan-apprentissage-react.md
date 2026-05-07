@@ -11,9 +11,9 @@ L'idée est de traduire tes connaissances "Vue" en langage "React". 🧠
 | N° | Fichier cours | Équivalent en Vue.js | Statut |
 |:---|:---|:---|:---|
 | 01 | `01-intro-jsx-state.md` | `ref()`, `<template>`, `{{ }}` | ✅ Terminé |
-| 02 | `02-events-conditions.md` | `@click`, `v-if`, `v-show` | 🔜 Prochain |
-| 03 | `03-composants-boucles.md` | Composants, Props, `v-for` | ⬜ À venir |
-| 04 | `04-formulaires-effets.md` | `v-model`, `watch`, API (`fetch`) | ⬜ À venir |
+| 02 | `02-events-conditions.md` | `@click`, `v-if`, `v-show` | ✅ Terminé |
+| 03 | `03-composants-boucles.md` | Composants, Props, `v-for` | ✅ Terminé |
+| 04 | `04-formulaires-effets.md` | `v-model`, `watch`, API (`fetch`) | 🔜 Prochain |
 
 ---
 

@@ -43,24 +43,24 @@
 ### Ce que tu dois faire :
 
 1. Crée ces states :
+
    - `estConnecte` → `false`
    - `prenom` → `'Andoniaina'`
    - `role` → `'admin'`
-
 2. Affiche :
+
    - **Si déconnecté** → "🔒 Accès refusé" + un bouton "Se connecter"
    - **Si connecté** → "Bienvenue {prenom}" + le rôle + un bouton "Se déconnecter"
-
 3. Les boutons doivent changer `estConnecte` entre `true` et `false`.
 
 ---
 
 ## ✅ Auto-évaluation
 
-- [ ] Mes boutons utilisent `onClick` (avec un O majuscule) ?
-- [ ] Quand j'ai un argument, j'enveloppe dans `() =>` ?
-- [ ] J'utilise `{ }` (pas `{{ }}`) pour afficher mes variables ?
-- [ ] Mes conditions ternaires fonctionnent ?
+- [X] Mes boutons utilisent `onClick` (avec un O majuscule) ?
+- [X] Quand j'ai un argument, j'enveloppe dans `() =>` ?
+- [X] J'utilise `{ }` (pas `{{ }}`) pour afficher mes variables ?
+- [X] Mes conditions ternaires fonctionnent ?
 
 ---
 
