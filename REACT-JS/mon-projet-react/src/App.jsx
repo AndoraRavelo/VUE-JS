@@ -2,10 +2,10 @@ import {useState, useEffect} from 'react'
 
 function App(){
     const[posts, setPosts] = useState([])
-    const [titre, setTitre] = useState([])
+    const [titre, setTitre] = useState('')
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
+        fetch(`https://jsonplaceholder.typicode.com/posts?_limit=5`)
         .then(res => res.json())
         .then(data => setPosts(data))
     }, [])
@@ -30,12 +30,13 @@ function App(){
     }
 
     const supprimerTache = async (id) => {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
             method: 'DELETE'
         })
 
         if(response.ok) {
-            const nouvelleListe = posts.filter(id)
+            const nouvelleListe = posts.filter((u) => u.id !== id)
+            setPosts(nouvelleListe)
         }
     } 
 
@@ -54,7 +55,7 @@ function App(){
                 {posts.map((post) => 
                 <li key={post.id}>
                     {post.title}
-                    <button>Supprimer</button>
+                    <button onClick={() => supprimerTache(post.id)}>Supprimer</button>
                 </li>
             )}
             </ul>
