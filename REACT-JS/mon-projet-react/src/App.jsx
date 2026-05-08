@@ -1,63 +1,106 @@
 import {useState, useEffect} from 'react'
+import axios from 'axios'
 
 function App(){
-    const[posts, setPosts] = useState([])
+    const [posts, setPosts] = useState([])
     const [titre, setTitre] = useState('')
 
+    const [editIf, setEditId] = 
+
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/posts?_limit=5`)
-        .then(res => res.json())
-        .then(data => setPosts(data))
+
+        axios
+            .get('https://jsonplaceholder.typicode.com/posts?_limit=5')
+            .then((response) => {
+                setPosts((response.data))
+            })
     }, [])
 
-
     const ajouterTache = async () => {
-        const nouvelleTache ={
+
+        const nouvelleTache = {
             title: titre
         }
 
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            headers : {'Content-Type': 'application/json'},
-            body: JSON.stringify(nouvelleTache)
-        })
+        const response = await axios.post (
+            'https://jsonplaceholder.typicode.com/posts',
+            nouvelleTache
+        )
 
-        if(response.ok) {
-            const nouvelObjet = await response.json()
-            setPosts([...posts, nouvelObjet])
-            setTitre('')
-        }
+        setPosts([...posts,
+            {
+                ...response.data,
+                id: Date.now()
+            } 
+        ])
+
+        setTitre('')
     }
 
     const supprimerTache = async (id) => {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-            method: 'DELETE'
-        })
+        await axios.delete(
+            `https://jsonplaceholder.typicode.com/posts/${id}`
+        )
+        const nouvelleListe = posts.filter(
+            (post) => post.id !== id
+        )
 
-        if(response.ok) {
-            const nouvelleListe = posts.filter((u) => u.id !== id)
-            setPosts(nouvelleListe)
-        }
-    } 
+        setPosts(nouvelleListe)
+    }
 
+        const modifierTache = (id) => {
+
+        const nouvelleListe = posts.map((post) =>
+            post.id === id
+                ? { ...post, title: 'Nouveau titre' }
+                : post
+        )
+
+        setPosts(nouvelleListe)
+    }
+//     const modifierTache = async (id) => {
+
+//         const objetModifiee = {
+//             title: 'Nouveau titre'
+//         }
+
+//         const response = await axios.put(
+//             `https://jsonplaceholder.typicode.com/posts/${id}`,
+//             objetModifiee
+//         )
+
+//         const nouvelleListe = posts.map((post) => 
+//             post.id === id
+//                 ? response.data 
+//                 : post
+//         )
+//         setPosts(nouvelleListe)
+// }
     return (
         <div>
+
             <input
              type="text"
              value={titre}
-             onChange= {(e) => setTitre(e.target.value)} 
-             />
-
-             <button onClick={ajouterTache}>
+             onChange={(e) => setTitre(e.target.value)}
+            />
+            <button onClick={ajouterTache}>
                 Ajouter
-             </button>
+            </button>
+
             <ul>
-                {posts.map((post) => 
-                <li key={post.id}>
-                    {post.title}
-                    <button onClick={() => supprimerTache(post.id)}>Supprimer</button>
-                </li>
-            )}
+                {posts.map((post) => (
+                    <li key={post.id}>
+                        {post.title}
+
+                        <button onClick={() => supprimerTache(post.id)}>
+                            Supprimer
+                        </button>
+                        <button onClick={() => modifierTache(post.id)}>
+                             Modifier 
+                        </button>
+                    </li>
+                ))}
             </ul>
         </div>
     )
