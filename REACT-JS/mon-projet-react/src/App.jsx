@@ -19,6 +19,10 @@ function App(){
 
     const ajouterTache = async () => {
 
+            if (titre.trim() === '') {
+            return
+        }
+
         const nouvelleTache = {
             title: titre
         }
@@ -59,6 +63,7 @@ function App(){
 
         setPosts(nouvelleListe)
     }
+
 //     const modifierTache = async (id) => {
 
 //         const objetModifiee = {
@@ -78,12 +83,12 @@ function App(){
 //         setPosts(nouvelleListe)
 // }
 
-    const commencerEdition = (post) => {
+const commencerEdition = (post) => {
         setEditId(post.id)
         setEditTexte(post.title)
     }
 
-    const validerModification = () => {
+const validerModification = () => {
 
         const nouvelleListe = posts.map((post) => 
             post.id === editId
