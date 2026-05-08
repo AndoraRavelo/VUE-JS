@@ -5,7 +5,8 @@ function App(){
     const [posts, setPosts] = useState([])
     const [titre, setTitre] = useState('')
 
-    const [editIf, setEditId] = 
+    const [editId, setEditId] = useState(null)
+    const [editText, setEditTexte] = useState('')
 
     useEffect(() => {
 
@@ -76,6 +77,25 @@ function App(){
 //         )
 //         setPosts(nouvelleListe)
 // }
+
+    const commencerEdition = (post) => {
+        setEditId(post.id)
+        setEditTexte(post.title)
+    }
+
+    const validerModification = () => {
+
+        const nouvelleListe = posts.map((post) => 
+            post.id === editId
+            ? { ...post, title: editText }
+            :post
+)
+        setPosts(nouvelleListe)
+
+        setEditId(null)
+        setEditTexte('')
+
+    }
     return (
         <div>
 
@@ -87,6 +107,18 @@ function App(){
             <button onClick={ajouterTache}>
                 Ajouter
             </button>
+                {editId && (
+                    <div>
+                        <input
+                            type="text"
+                            value={editText}
+                            onChange={(e) => setEditTexte(e.target.value)}
+                        />
+                        <button onClick={validerModification}>
+                            Sauvegarder
+                        </button>
+                    </div>
+                )}
 
             <ul>
                 {posts.map((post) => (
@@ -96,7 +128,7 @@ function App(){
                         <button onClick={() => supprimerTache(post.id)}>
                             Supprimer
                         </button>
-                        <button onClick={() => modifierTache(post.id)}>
+                        <button onClick={() => commencerEdition(post)}>
                              Modifier 
                         </button>
                     </li>
