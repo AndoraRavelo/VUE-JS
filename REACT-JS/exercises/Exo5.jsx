@@ -41,6 +41,7 @@ function App(){
     }
 
     const modifierTache = async (id) => {
+
         const objetModifiee = {
             title: 'Nouveau titre'
         }
@@ -50,9 +51,13 @@ function App(){
             objetModifiee
         )
 
-        console.log(response.data)
-    }
-
+        const nouvelleListe = posts.map((post) => 
+            post.id === id
+                ? response.data 
+                : post
+        )
+        setPosts(nouvelleListe)
+}
     return (
         <div>
 
@@ -72,6 +77,9 @@ function App(){
 
                         <button onClick={() => supprimerTache(post.id)}>
                             Supprimer
+                        </button>
+                        <button onClick={() => modifierTache(post.id)}>
+                             Modifier 
                         </button>
                     </li>
                 ))}
